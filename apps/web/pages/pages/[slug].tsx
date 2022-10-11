@@ -1,6 +1,7 @@
 import axios from "axios"
+import { wpPostData } from "../posts/[slug]"
 
-const Page = ({ pageData }) => {
+const Page = ({ pageData }: { pageData: wpPostData }) => {
   return (
     <div>
       <h1>{pageData.title.rendered}</h1>

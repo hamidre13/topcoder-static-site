@@ -1,6 +1,14 @@
 import axios from "axios"
-
-const Page = ({ postData }) => {
+export interface wpPostData {
+  title: {
+    rendered: string
+  },
+  content: {
+    rendered: string
+  },
+  date_gmt: string
+}
+const Page = ({ postData }: { postData: wpPostData }) => {
   return (
     <div>
       <h1>{postData.title.rendered}</h1>
